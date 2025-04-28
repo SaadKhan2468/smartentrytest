@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+body{
+background-color: white;
+}
+.hero-glow {
+  background: linear-gradient(231.18deg, #267FFE 15.85%,  #FA589D 58.43%, #9D36FC 68.45%, #F040F7 79.9%),
+  linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  background-size: 200%;
+  animation: anime 8s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.glow {
+  background: linear-gradient(231.18deg, #267FFE 15.85%,  #FA589D 58.43%, #9D36FC 68.45%, #F040F7 79.9%),
+  linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  background-size: 600%;
+  animation: anime 16s linear infinite;
+}
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.heroimg img {
+  animation: float 3s linear infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+      transform: translateY(0rem);
+  }
+
+  50% {
+      transform: translateY(-1.5rem);
+  }
+}
+.gradient-bg:hover{
+  /* background: rgb(231, 234, 236) !important; */
+  background: #F3F3F3 !important;
+  /* color: white; */
+  background: #F3F3F3;
+/* background: linear-gradient(90deg, rgba(38,127,254,1) 0%, rgba(240,64,247,1) 100%) !important; */
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;  
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.transition-width {
+  transition: width 0.3s;
+}
+
+
+.sidebar {
+  transition: all 0.5s ease;
+}
+
+.sidebar-collapsed .sidebar-content {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar-expanded .sidebar-content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.main-content {
+  transition: margin-left 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-target {
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  width: 300px;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+}
+
+
+
+
+@media (max-width: 640px) { 
+  .tooltip {
+      left: 832% !important; 
+      transform: translateX(-50%) !important; 
+      bottom: 100% !important; 
+     
+  }
+}
+
+
+
+.links-container::-webkit-scrollbar {
+  width: 5px; 
+  height: 2px !important;
+}
+
+
+.links-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+.links-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #6a11cb, #2575fc); 
+  border-radius: 10px; 
+}
+
+
+.links-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb); 
+}
+
+.links-container-2::-webkit-scrollbar {
+  width: 4px !important; 
+  height: 6px !important;
+}
+
+
+.links-container-2::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+.links-container-2::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #6a11cb, #2575fc); 
+  border-radius: 10px; 
+}
+
+
+.links-container-2::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb); 
+}
+
+/* 
+.active-link {
+  color: white;
+  background: linear-gradient(90deg, rgba(38,127,254,1) 0%, rgba(240,64,247,1) 100%) !important;
+  border-radius: 7px;
+} */
+.active-link {
+  color: black;
+  background: #F3F3F3 !important;
+  border-radius: 7px;
+}
+
+
+
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 0.5rem;
+  background-color: #4caf50; 
+  border-radius: 0.5rem;
+  transition: width 0.5s ease-in-out; 
+}
+
+
+
+
+
+.rotate-icon {
+  transition: transform 0.3s ease;
+}
+
+.rotate-icon.expanded {
+  transform: rotate(90deg); 
+}
+
+
+
+
+
+
+
+
+
+
+.sidebar-card {
+  width: 300px; 
+  overflow: hidden; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+}
+
+.text-container {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.project-name {
+  max-width: 100%; 
+  white-space: normal; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  word-break: break-word; 
+}
