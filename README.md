@@ -1,3 +1,1 @@
-- ✅ Online Registration - Completed
-- ✅Automated Admit Card Generation - Completed
-- 
+
