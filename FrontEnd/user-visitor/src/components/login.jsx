@@ -90,6 +90,9 @@ const Login = () => {
           <Button
             variant="contained"
             fullWidth
+            onClick={() => {
+              window.location.href = "http://localhost:5174/";
+            }}
             sx={{
               backgroundColor: "#000000",
               color: "#ffffff",
