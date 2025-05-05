@@ -10,6 +10,8 @@ import {
   Divider,
 } from "@mui/material";
 import GoogleIcon from "@mui/icons-material/Google";
+import { MenuItem } from "@mui/material";
+
 
 const Login = () => {
   return (
@@ -69,6 +71,20 @@ const Login = () => {
             fullWidth
             sx={{ marginBottom: 2 }}
           />
+
+          {/* User Role Dropdown */}
+<TextField
+  select
+  label="Select Role"
+  value={selectRole} // Bind state to the dropdown
+  onChange={(e) => setSelectRole(e.target.value)} // Update state on change
+  fullWidth
+  sx={{ marginBottom: 2 }}
+>
+  <MenuItem value="admin">Admin</MenuItem>
+  <MenuItem value="registered">Student</MenuItem>
+</TextField>
+          
           {/* Remember Me and Forgot Password */}
           <Box
             sx={{
@@ -90,9 +106,17 @@ const Login = () => {
           <Button
             variant="contained"
             fullWidth
-            onClick={() => {
-              window.location.href = "http://localhost:5174/";
-            }}
+/*************  ✨ Windsurf Command 🌟  *************/
+onClick={() => {
+  if (selectRole === "registered") {
+    window.location.href = "http://localhost:5173/registered";
+  } else if (selectRole === "admin") {
+    window.location.href = "http://localhost:5174/admin";
+  } else {
+    alert("Please select a role!");
+  }
+}}
+/*******  939ded69-775c-46c8-86be-1006eae093b8  *******/
             sx={{
               backgroundColor: "#000000",
               color: "#ffffff",
