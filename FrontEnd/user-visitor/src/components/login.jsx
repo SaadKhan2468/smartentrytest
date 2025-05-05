@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Grid,
@@ -8,12 +8,15 @@ import {
   Checkbox,
   Link,
   Divider,
+  MenuItem,
 } from "@mui/material";
 import GoogleIcon from "@mui/icons-material/Google";
-import { MenuItem } from "@mui/material";
+// import { MenuItem } from "@mui/material";
 
 
 const Login = () => {
+
+  const [selectRole, setSelectRole] = useState("");
   return (
     <Box
       sx={{
@@ -109,9 +112,9 @@ const Login = () => {
 /*************  ✨ Windsurf Command 🌟  *************/
 onClick={() => {
   if (selectRole === "registered") {
-    window.location.href = "http://localhost:5173/registered";
+    window.location.href = "http://localhost:5173";
   } else if (selectRole === "admin") {
-    window.location.href = "http://localhost:5174/admin";
+    window.location.href = "http://localhost:5174";
   } else {
     alert("Please select a role!");
   }
