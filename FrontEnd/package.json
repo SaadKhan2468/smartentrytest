@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "private": true,
+  "workspaces": [
+    "user-admin",
+    "user-visitor",
+    "user-registered"
+  ],
+  "scripts": {
+    "install-all": "npm install",
+    "start-admin": "npm run dev --workspace user-admin",
+    "start-visitor": "npm run dev --workspace user-visitor",
+    "start-registered": "npm run dev --workspace user-registered",
+    "start-all": "concurrently \"npm run start-admin\" \"npm run start-visitor\" \"npm run start-registered\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
