@@ -1,0 +1,29 @@
+{
+  "name": "frontend",
+  "private": true,
+  "workspaces": [
+    "user-admin",
+    "user-visitor",
+    "user-registered"
+  ],
+  "scripts": {
+    "install-all": "npm install",
+    "start-admin": "npm run dev --workspace user-admin",
+    "start-visitor": "npm run dev --workspace user-visitor",
+    "start-registered": "npm run dev --workspace user-registered",
+    "start-all": "concurrently \"npm run start-admin\" \"npm run start-visitor\" \"npm run start-registered\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "mysql2": "^3.14.1",
+    "react-error-boundary": "^6.0.0",
+    "socket.io-client": "^4.8.1"
+  }
+}
